@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="meca">
+    
+<div>
+
+    <label for="aa">r</label>
+    <input type="text" id="aa">
+    <br>
+    <label for="bb">g</label>
+    <input type="text" id="bb">
+    <br>
+    <label for="cc">b</label>
+    <input type="text" id="cc">
+    <br>
+    
+
+    <button id="sol" onclick="color()">alterar cor</button>
+
+</div>
+
+
+    <script src="seis.js"></script>
+</body>
+</html>
+=============================================================================================================
+===============================================================================================================
+let r = document.getElementById("aa");
+let g = document.getElementById("bb");
+let b = document.getElementById("cc");
+let fundo = document.getElementById("meca");
+
+function color(){
+    let result = "rgb(" + r.value + "," + g.value + "," + b.value + ")";
+    fundo.style.backgroundColor = result;
+}
+
+
+
+
