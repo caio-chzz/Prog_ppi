@@ -1,0 +1,9 @@
+CREATE DATABESE pessoa;
+USE pessoa;
+
+CREATE TABLE pessoa (
+    id INT NOT NULL  PRIMARY KEY  AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL
+);
