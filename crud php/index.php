@@ -42,7 +42,7 @@ mysqli_close($conn);
         <label for="pesquisar">Pesquisar:</label>
         <input type="text" id="pesquisar" name="pesquisar">
         <button type="button" id="btnPesquisar" onclick="pesquisarDoces()">Pesquisar</button>
-        <button type="button" id="btnCadastrar">Cadastrar</button>
+        <button type="button" id="btnCadastrar" onclick="abreCadastro()">Cadastrar</button>
     </div>
 
     
@@ -100,6 +100,11 @@ function excluirDoce(doceId) {
 
 function editarDoce(doceId) {
     window.location.href = 'editar.php?id=' + doceId;
+}
+
+function cadastrarDoce() {
+    
+    window.location.href = 'criar.php';
 }
 </script>
 </body>
