@@ -5,7 +5,6 @@ session_start();
 
 // Verifique se o usuário está autenticado.
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    // Se não estiver autenticado, redirecione para a página de login.
     header('Location: login.php');
     exit;
 }
@@ -94,10 +93,9 @@ mysqli_close($conexao);
 </script>
 <script>
 function excluirDoce(doceId) {
-    var confirmacao = confirm("Tem certeza que deseja excluir este doce?");
-    if (confirmacao) {
+    
         window.location.href = 'excluir.php?id=' + doceId;
-    }
+    
 }
 
 function editarDoce(doceId) {
