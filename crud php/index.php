@@ -11,18 +11,18 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 
 $query = "SELECT id, nome_doce, preco, sabor FROM doces";
-$result = mysqli_query($conexao, $query);
+$result = mysqli_query($conn, $query);
 
 
 if (!$result) {
-    die("Erro na consulta: " . mysqli_error($conexao));
+    die("Erro na consulta: " . mysqli_error($conn));
 }
 
 
 $doces = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-mysqli_close($conexao);
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
